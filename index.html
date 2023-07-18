@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIYA</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'SUIT-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            line-height: 1;
+            color: #333;
+            font-family: 'SUIT-Regular';
+        }
+
+        header {}
+
+        header .top {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #243C84;
+            color: white;
+            position: relative;
+        }
+
+        header .top .box1 li {
+            line-height: 50px;
+            display: inline-block;
+        }
+
+        header .top .box2 {
+            position: absolute;
+            top: 0;
+            right: 170px;
+        }
+
+        header .top .box2 li {
+            display: inline-block;
+            line-height: 50px;
+        }
+
+        header .top .box1 li a {
+            padding: 0 31px;
+        }
+
+        header .top .box2 li a {
+            padding: 0 31px;
+        }
+
+        header .top li:hover {
+            background-color: white;
+            color: #333;
+            font-weight: bold;
+        }
+
+        header .top>div {
+            width: 150px;
+            height: 30px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+        }
+
+
+        header .top>div img {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+
+        /* 🎈header 2🎈 */
+        header .inner {
+            width: 1440px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        header .inner h1 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            line-height: 0;
+            transform: translateY(-50%);
+        }
+
+        header .inner nav {
+            height: 104px;
+            line-height: 104px;
+            text-align: center;
+        }
+
+        header .inner nav .gnb .depth01 {
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            padding: 0 18px;
+            font-weight: bold;
+            width: 80px;
+        }
+
+        header .inner nav .gnb .depth01:hover {
+            background-color: #243C84;
+            color: white;
+        }
+        header:hover .inner nav .gnb .depth01 .depth02 {
+            display: block;
+        }
+
+        header:hover .bg {
+            display: block;
+        }
+
+        header .inner nav .gnb .depth01 .depth02 {
+            background-color: rgba(164, 164, 164, 0);
+            width: 100%;
+            line-height: 2.5;
+            position: absolute;
+            top: 104px;
+            left: -10px;
+            display: none;
+            z-index: 10;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 12px;
+            color: #595959;
+            vertical-align: top;
+        }
+      
+        header .inner nav .gnb .depth01 .depth02 li:hover {
+            background-color: #243c84;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        header .inner > ul li {
+            width: 36px;
+            height: 36px;
+            display: inline-block;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid #243C84;
+            border-radius: 40px;
+            padding: 3px;
+            text-align: center;
+            line-height: 45px;
+            margin-left: 5px;
+            position: relative;
+        }
+
+        header .inner > ul li:hover {
+            background-color: #6074b257;
+        }
+
+        header .inner > ul li img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        header .inner > ul {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+        }
+
+        header .bg {
+            width: 100%;
+            height: 160px;
+            background-color: rgba(255, 255, 255, 0.712);
+            display: none;
+            position: relative;
+            z-index: 9;
+            position: absolute;
+            top: 154px;
+        }
+
+        /* 🎈main_visual🎈 */
+        .main_visual img {
+            position: absolute;
+            top: 154px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .main_visual {
+            width: 1920px;
+            height: 620px;
+        }
+
+        /* 🎈cont01🎈 */
+        .cont01 {
+            width: 1920px;
+            margin: 0 auto;
+            height: 920px;
+            background-image: url(img/이미지/main_cont1bg/FireShot\ Capture\ 017\ -\ 이디야\ –\ Figma\ -\ www.figma.com.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .cont01 .left {
+            position: absolute;
+            top: 114px;
+            left: 240px;
+        }
+
+        .cont01 .left h1 {
+            font-size: 80px;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 1px 1px 5px #333;
+        }
+
+        .cont01 .left ul li {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .cont01 .left ul li span {
+            border-bottom: 3px solid #fff;
+        }
+
+        .cont01 .right {
+            position: absolute;
+            top: 123px;
+            right: 53px;
+            color: #243C84;
+        }
+
+        .cont01 .right .title {
+            margin-bottom: 82px;
+            
+        }
+
+        .cont01 .right .title h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            
+        }
+
+        .cont01 .right .title p {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .cont01 .right .img {
+            margin-bottom: 18px;
+        }
+
+        .cont01 .right .img figure {
+            display: inline-block;
+            position: relative;
+
+        }
+
+        .cont01 .right .img figure::before {
+            content: '';
+            width: 217px;
+            height: 310px;
+            background-color: #3333333e;
+            position: absolute;
+            display: none;
+        }
+
+        .cont01 .right .img figure:hover::before {
+            display: block;
+        }
+
+        .cont01 .right .img figure:hover p {
+            display: block;
+        }
+
+        .cont01 .right .img figure p {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            color: white;
+            display: none;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .cont01 .right .box p {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 67px;
+        }
+
+        .cont01 .right .box p::after {
+            content: '';
+            background-color: #243C84;
+            width: 650px;
+            height: 1px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .cont01 .right .box .box2 {
+            display: flex;
+        }
+
+        .cont01 .right .box .box2 figure {
+            margin-right: 24px;
+        }
+
+        .cont01 .right .box .box2 figure figcaption {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .cont01>img {
+            width: 430px;
+            height: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* 🎈cont02🎈 */
+        .cont02 {
+            width: 1920px;
+            margin: 0 auto;
+            height: 1680px;
+            background-image: url(img/이미지/cont02/BG.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .cont02 .list {
+            width: 1440px;
+            margin: 0 auto;
+        }
+
+        .cont02 .list .title {
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .cont02 .list .title h6 {
+            color: #243C84;
+            background-color: white;
+            border: 1px solid #243C84;
+            width: 196px;
+            margin: 0 auto;
+            height: 34px;
+            line-height: 34px;
+            border-radius: 40px;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .cont02 .list .title h2 {
+            font-size: 72px;
+            color: white;
+            text-shadow: 1px 1px 5px #333;
+        }
+
+        .cont02 .list .title p {
+            color: white;
+            margin-top: 25px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        .cont02 .list .img {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 46px;
+            object-fit: cover;
+            transition: 1.2s;
+        }
+
+        .cont02 .list .img div img {
+            display: block;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 3px 3px 10px #333;
+        }
+
+        .cont02 .list .img .box1 img {
+            margin-bottom: 24px;
+        }
+
+        .cont02 .list .img .box2 img {
+            margin-bottom: 24px;
+            width: 586px;
+            height: 346px;
+        }
+
+        .cont02 .list .img .box3 {
+            display: flex;
+            transition: 1.75s;
+        }
+
+        .cont02 .list .img .box3 img {
+            margin-right: 24px;
+        }
+
+        /* 🎈cont03🎈 */
+        .cont03 {
+            width: 1920px;
+            margin: 0 auto;
+            height: 960px;
+            background-color: #F5F5F5;
+        }
+
+        .cont03 .box {
+            width: 1440px;
+            margin: 0 auto;
+        }
+
+        .cont03 .box .title {
+            text-align: center;
+            padding-top: 87px;
+        }
+
+        .cont03 .box .title h2 {
+            font-size: 60px;
+            color: #243C84;
+            display: inline-block;
+            position: relative;
+            z-index: 9;
+        }
+
+        .cont03 .box .title h2::after {
+            content: '';
+            background-color: #FFB800;
+            width: 401px;
+            height: 36px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            z-index: -1;
+        }
+
+        .cont03 .box .title p {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .cont03 .box .list {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cont03 .box .list .item {
+            margin: 40px 20px 0;
+            width: 342px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .cont03 .box .list .item figure {
+            overflow: hidden;
+        }
+        .cont03 .box .list .item img {
+            width: 100%;
+            height: 342px;
+        }
+        .cont03 .box .list .item img:hover {
+            transform: scale(1.1);
+        }
+        .cont03 .box .list .item div {
+            background-color: white;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .cont03 .box .list .item div h3 {
+            font-size: 18px;
+        }
+
+
+        .cont03 .box .list .item div p {
+            margin-top: 80px;
+            font-size: 14px;
+        }
+
+        .cont03 .box .bottom {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .cont03 .box .bottom span {
+            background-color: #243C84;
+            color: white;
+            width: 164px;
+            height: 55px;
+            display: inline-block;
+            line-height: 55px;
+
+        }
+
+        .cont03 .box .bottom span:hover {
+            background-color: #F5F5F5;
+            color: #243C84;
+            border: 3px solid #243C84;
+            font-weight: bold;
+        }
+
+        /* 🎈cont04🎈 */
+        .cont04 {
+            width: 1920px;
+            margin: 0 auto;
+            height: 960px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cont04 .left {
+            position: relative;
+        }
+
+        .cont04 .right {}
+
+        .cont04 .left .list {
+            position: absolute;
+            top: 262px;
+            left: 240px;
+            width: 600px;
+        }
+
+        .cont04 .left .list h6 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .cont04 .left .list h2 {
+            font-size: 60px;
+            position: relative;
+            margin-bottom: 38px;
+            
+        }
+
+        .cont04 .left .list h2::after {
+            content: '';
+            background-color: #00A3FF;
+            width: 295px;
+            height: 36px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .cont04 .left .list h5 {
+            font-size: 23px;
+            line-height: 34.5px;
+            margin-bottom: 38px;
+        }
+
+        .cont04 .left .list p {
+            font-weight: 500;
+            margin-bottom: 55px;
+            line-height: 24px;
+        }
+
+        .cont04 .left .list span {
+            background-color: #243C84;
+            color: white;
+            width: 143px;
+            height: 55px;
+            line-height: 55px;
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 15px;
+            border: 3px solid #243C84;
+        }
+
+        .cont04 .left .list span:hover {
+            background-color: #F5F5F5;
+            border: 3px solid #243C84;
+            color: #243C84;
+            font-weight: bold;
+        }
+
+        /* 🎈footer🎈 */
+        footer {
+            width: 100%;
+            height: 577px;
+            background-color: #262626;
+            color: #818181;
+        }
+
+        footer .inner {
+            width: 1440px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 160px;
+        }
+
+        footer .inner .nb {
+            margin: 60px 0;
+        }
+
+        footer .inner .nb li {
+            display: inline-block;
+            font-size: 16px;
+            margin: 0 25px;
+        }
+
+        footer .inner .nb li span {
+            background-color: #D9D9D9;
+            display: inline-block;
+            width: 160px;
+            height: 28px;
+            line-height: 28px;
+            position: relative;
+        }
+
+        footer .inner .nb li span p {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        footer .inner .nb li span::after {
+            content: url(img/이미지/footer/Vector.png);
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-30%);
+        }
+
+        footer .inner .info div span {
+            font-size: 16px;
+            margin: 0px 10px;
+            line-height: 30px;
+        }
+
+        footer .inner .copy {
+            margin-top: 50px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <ul class="box1">
+                <li><a href="#">브랜드 사이트</a></li>
+                <li><a href="#">기업 사이트</a></li>
+                <li><a href="#">창업 안내</a></li>
+                <li><a href="#">채용 안내</a></li>
+            </ul><!-- box1 end -->
+            <div><img src="img/이미지/header/Vector-4.png" alt="검색" /></div>
+            <ul class="box2">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">고객의 소리</a></li>
+                <li><a href="#">이디야 스토어</a></li>
+                <li><a href="#">모바일상품권 스토어</a></li>
+            </ul><!-- box2 end -->
+        </div><!-- .top end-->
+        <div class="inner">
+            <h1>
+                <a href="#"><img src="img/이미지/header/top_logo 1.png" alt="로고"></a>
+            </h1>
+            <nav>
+                <ul class="gnb">
+                    <li class="depth01">
+                        <a href="#">원두</a>
+                        <ul class="depth02">
+                            <li><a href="#">이디야블렌드</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .원두 end -->
+                    <li class="depth01">
+                        <a href="#">메뉴</a>
+                        <ul class="depth02">
+                            <li><a href="#">음료</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">MD</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .메뉴 end -->
+                    <li class="depth01">
+                        <a href="#">유통제품</a>
+                        <ul class="depth02">
+                            <li><a href="#">스틱커피</a></li>
+                            <li><a href="#">커피믹스</a></li>
+                            <li><a href="#">캡슐커피</a></li>
+                            <li><a href="#">수출입거래</a></li>
+                            <li><a href="#">B2B/특판/대리점 거래</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .유통 end -->
+                    <li class="depth01">
+                        <a href="#">이디야멤버스</a>
+                        <ul class="depth02">
+                            <li><a href="#">맴버십안내</a></li>
+                            <li><a href="#">서비스안내</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .멤버스 end -->
+                    <li class="depth01">
+                        <a href="#">상품권.제휴카드</a>
+                        <ul class="depth02">
+                            <li><a href="#">제휴카드</a></li>
+                            <li><a href="#">키프트카드</a></li>
+                            <li><a href="#">모바일상품권</a></li>
+                            <li><a href="#">단체ㆍ기업 구매</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .상품권 end -->
+                    <li class="depth01">
+                        <a href="#">브랜드 소식</a>
+                        <ul class="depth02">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트 안내</a></li>
+                            <li><a href="#">사회공헌 활동</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .브랜드 end -->
+                    <li class="depth01">
+                        <a href="#">고객 지원</a>
+                        <ul class="depth02">
+                            <li><a href="#">고객의 소리</a></li>
+                            <li><a href="#">소비자중심경영(CCM)</a></li>
+                            <li><a href="#">제휴.제안</a></li>
+                        </ul><!-- .depth02 end -->
+                    </li><!-- .고객지원 end -->
+                </ul><!-- .gnb end -->
+            </nav>
+            <ul>
+                <li><a href="#"><img src="img/이미지/이디야 (6)/Vector.png" alt="블로그"></a></li>
+                <li><a href="#"><img src="img/이미지/이디야 (6)/Vector-1.png" alt="인스타"></a></li>
+                <li><a href="#"><img src="img/이미지/이디야 (6)/Vector-2.png" alt="페북"></a></li>
+                <li><a href="#"><img src="img/이미지/이디야 (6)/Vector-3.png" alt="유튜브"></a></li>
+            </ul>
+        </div><!-- .inner end -->
+        <div class="bg">
+            <span></span>
+        </div><!-- .bg end -->
+    </header>
+    <section class="main_visual">
+        <img src="img/이미지/main_cont1bg/메인비주얼.jpg" alt="메인비쥬얼팬케이크">
+    </section><!-- .main_visual end -->
+    <section class="cont01">
+        <div class="left">
+            <div data-aos="fade-right">
+                <h1>EDIYA MENU</h1>
+                <ul>
+                    <li><span>SIGNATURE</span></li>
+                    <li>BEVERAGE</li>
+                    <li>COFFEE</li>
+                    <li>COOKIE</li>
+                </ul>
+            </div>
+        </div><!-- .left end -->
+        <div class="right">
+            <div data-aos="fade-left" class="title">
+                <h2>SIGNATURE</h2>
+                <p>이디야 감성과 재미를 듬뿍 담아 낸, 이디야에서</p>
+            </div><!-- .title end -->
+            <div data-aos="zoom-in" class="img">
+                <figure>
+                    <img src="img/이미지/cont01png/IMG_1671585023298 1.png" alt="">
+                    <p>ICED 연유 카페 라떼</p>
+                </figure>
+                <figure>
+                    <img src="img/이미지/cont01png/IMG_1647321929656 1.png" alt="">
+                    <p>ICED 달고나 라떼</p>
+                </figure>
+                <figure>
+                    <img src="img/이미지/cont01png/IMG_1647320234464 1.png" alt="">
+                    <p>아포가토 오리지널</p>
+                </figure>
+            </div><!-- .img end -->
+            <div class="box">
+                <p data-aos="fade-left">추천 베이커리</p>
+                <div data-aos="zoom-in" class="box2">
+                    <figure>
+                        <img src="img/이미지/cont01png/Ellipse 1.png" alt="">
+                        <figcaption>버터 팬케이크</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/이미지/cont01png/Ellipse 2.png" alt="">
+                        <figcaption>초코 티라미슈</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/이미지/cont01png/Ellipse 3.png" alt="">
+                        <figcaption>허니 카라멜 브레드</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/이미지/cont01png/Ellipse 4.png" alt="">
+                        <figcaption>토피넛 크러플</figcaption>
+                    </figure>
+                </div><!-- .box2 end -->
+            </div><!-- box end -->
+        </div><!-- .right end -->
+        <img src="img/이미지/이디야 (6)/IMG_1648685292664 1.png" alt="">
+    </section><!-- .cont01 end -->
+    <section class="cont02">
+        <div class="list">
+            <div data-aos="fade-down" class="title">
+                <h6>EDIYA 인테리어</h6>
+                <h2>이디야커피만의 차별화된 매장</h2>
+                <p>EDIYA의 공간은 한잔의 커피와 함께 할 수 있는 편안함을 위하여 최고의 공간을 연출합니다. <br>
+                    안락하고 감성적인 실내 공간 연출</p>
+            </div><!-- .title end -->
+            <div class="img">
+                <div data-aos="fade-right" class="box1">
+                    <img src="img/이미지/cont02/L.jpg" alt="">
+                </div>
+                <div data-aos="fade-left" class="box2">
+                    <img src="img/이미지/cont02/Mask group.jpg" alt="">
+                    <img src="img/이미지/cont02/3.jpg" alt="">
+                </div>
+                <div data-aos="fade-up" class="box3">
+                    <img src="img/이미지/cont02/4.jpg" alt="">
+                    <img src="img/이미지/cont02/5.jpg" alt="">
+                    <img src="img/이미지/cont02/6.jpg" alt="">
+                    <img src="img/이미지/cont02/7.jpg" alt="">
+                </div>
+            </div><!-- .img end -->
+        </div><!-- .list end -->
+    </section><!-- .cont02 -->
+    <section class="cont03">
+        <div class="box">
+            <div class="title">
+                <h2>EDIYA EVENT</h2>
+                <p>전체 매장 및 각 매장에서 다양한 이벤트가 진행중 입니다.</p>
+            </div><!-- .title end -->
+            <div class="list">
+                <div data-aos="flip-left" class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/이미지/cont03/Rectangle 9.jpg" alt="">
+                        </figure>
+                        <div>
+                            <h3>굿즈 SET 한방에 GET! 이벤트</h3>
+                            <p>2023년 07월 13일 ~ 2023년 08월 09일</p>
+                        </div>
+                    </a>
+                </div><!-- .item end 1-->
+                <div data-aos="flip-left" class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/이미지/cont03/Rectangle 9-1.jpg" alt="">
+                        </figure>
+                        <div>
+                            <h3>네이버페이 포인트 머니로 5천원 이상 ...</h3>
+                            <p>2023년 07월 10일 ~ 2023년 07월 23일</p>
+                        </div>
+                    </a>
+                </div><!-- .item end 1-->
+                <div data-aos="flip-left" class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/이미지/cont03/Rectangle 9-2.jpg" alt="">
+                        </figure>
+                        <div>
+                            <h3>영호남 NEW 아메리카노 경품 행사 ...</h3>
+                            <p>2023년 07월 10일 ~ 2023년 07월 23일</p>
+                        </div>
+                    </a>
+                </div><!-- .item end 1-->
+            </div><!-- .list end -->
+            <div class="bottom">
+                <span><a href="#">이벤트 더보기</a></span>
+            </div><!-- .bottom end -->
+        </div><!-- .box end -->
+    </section><!-- .cont03 end -->
+    <section class="cont04">
+        <div class="left">
+            <div data-aos="fade-up-right" class="list">
+                <h6>이디야 커피 이야기</h6>
+                <h2>EDIYA SIZE<br />& 2 SHOT</h2>
+                <h5>
+                    100% 프리미엄 아라비카 원두를 로스팅하여,<br />
+                    깊고 부드러운 커피와 빅 사이즈로 구성된<br />
+                    다양한 음료를 합리적인 가격으로 제공합니다.
+                </h5>
+                <p>좋은 품질의 재료를, 합리적인 가격으로 제공하여<br />
+                    좋은 품질의 음료를 저렴한 가격으로 만나보실 수 있습니다.</p>
+                <span><a href="#">브랜드 소개</a></span>
+                <span><a href="#">창업 소개</a></span>
+            </div><!-- .list end -->
+        </div><!-- .left end -->
+        <div class="right">
+            <div data-aos="fade-up-left"><img src="img/이미지/cont04/1.jpg" alt=""></div>
+        </div><!-- .right end -->
+    </section><!-- .cont04 end -->
+    <footer>
+        <div class="inner">
+            <img src="img/이미지/footer/푸터 로고.png" alt="푸터 로고">
+            <ul class="nb">
+                <li><a href="#">영상정보처리기기 운영ㆍ관리방침</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">멤버스 이용약관</a></li>
+                <li><a href="#">가맹 안내</a></li>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">점주의 방</a></li>
+                <li><span>
+                        <p>KOREA</p>
+                    </span></li>
+            </ul><!-- .nb end -->
+            <div class="info">
+                <div>
+                    <span>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</span>
+                    <span>TEL : 02-543-6467</span>
+                    <span>FAX : 02-543-7191</span>
+                    <span>사업자등록번호 : 107-86-16302</span>
+                </div>
+                <div>
+                    <span>통신판매업 신고 : 강남 제 002519호</span>
+                    <span>대표이사 : 문창기, 권익범</span>
+                </div>
+            </div><!-- .info end -->
+            <div class="copy">
+                <span>ⓒ 2023 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</span>
+            </div><!-- .copy end -->
+        </div><!-- .inner end -->
+    </footer>
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
